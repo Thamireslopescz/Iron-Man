@@ -1,0 +1,173 @@
+* {
+    padding: 0%;
+    margin: 0;
+  }
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  z-index: -1;
+  background-image: url(./images/fundo.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  font-family: "Fonte-do-batman", Arial, sans-serif;
+}
+section {
+  height: 100%;
+  width: 100%;
+}
+.central {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(50% - 400px);
+  width: 800px;
+  height: 383px;
+  animation: logo 5s;
+  animation-iteration-count: 1;
+}
+@keyframes logo {
+  0% {
+    top: 300px;
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 95px;
+  }
+  100% {
+    top: 0;
+    left: calc(50% - 400px);
+    width: 800px;
+    height: 383px;
+  }
+}
+
+.homem {
+  position: absolute;
+  z-index: 3;
+  top: 70px;
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 750px;
+  animation: homem 5s;
+  animation-iteration-count: 1;
+}
+
+@keyframes homem {
+  0% {
+    top: 70px;
+    left: calc(50% - 225px);
+    width: 450px;
+    height: 843px;
+  }
+  100% {
+    top: 70px;
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 750px;
+  }
+}
+
+.fundo-preto {
+  background-color: rgba(0, 0, 0, 0.461);
+  position: absolute;
+  z-index: 5;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.fundo-fim {
+  background-image: url(./images/end.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 4;
+  opacity: 1;
+  animation: fundoFim 10s;
+}
+@keyframes fundoFim {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@font-face {
+  font-family: "Fonte-do-batman";
+  src: url("./assets/GothamWomans-B8md.ttf") format("truetype");
+}
+
+  .fonte-homem {
+  text-shadow: 1px 1px 5px rgba(255, 217, 0, 0.906);
+  position: absolute;
+  top: 500px;
+  filter: blur(0.2px);
+  color: brown;
+}
+
+h1 {
+  left: calc(50% - 215px);
+  margin: 10px;
+  font-size: 45px;
+}
+h2 {
+  margin-top: 100px;
+  left: calc(50% - 130px);
+  font-size: 25px;
+}
+
+@keyframes brilho {
+  0% {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 1px rgb(216, 216, 216), 0 0 5px rgb(232, 232, 232),
+      0 0 100px rgb(135, 87, 87);
+  }
+  20%,
+  90% {
+    color: rgb(157, 41, 41);
+  }
+}
+
+h1, h2 {
+  animation: brilho 2s ease-in-out infinite;
+}
+
+.brilhofundo {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, #771314 20%, transparent 90%);
+  position: absolute;
+  animation: brilho-anim 2s ease-in-out infinite;
+}
+
+@keyframes brilho-anim {
+  0% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
